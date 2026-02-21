@@ -40,11 +40,20 @@ export default function SkillsSection() {
                             animation: "marquee 30s linear infinite",
                             width: "max-content",
                         }}
+                        onMouseEnter={(e) => {
+                            (e.currentTarget as HTMLElement).style.animationPlayState = "paused";
+                        }}
+                        onMouseLeave={(e) => {
+                            (e.currentTarget as HTMLElement).style.animationPlayState = "running";
+                        }}
                     >
                         {[...techMarquee, ...techMarquee].map((tech, i) => (
                             <div
                                 key={i}
                                 style={{
+                                    display: "flex",
+                                    alignItems: "center",
+                                    gap: "8px",
                                     padding: "10px 20px",
                                     borderRadius: "50px",
                                     background: "#f5f5f5",
@@ -67,7 +76,15 @@ export default function SkillsSection() {
                                     (e.currentTarget as HTMLElement).style.background = "#f5f5f5";
                                 }}
                             >
-                                {tech}
+                                {/* eslint-disable-next-line @next/next/no-img-element */}
+                                <img
+                                    src={tech.icon}
+                                    alt={tech.name}
+                                    width={18}
+                                    height={18}
+                                    style={{ display: "block", flexShrink: 0 }}
+                                />
+                                {tech.name}
                             </div>
                         ))}
                     </div>
@@ -151,7 +168,14 @@ export default function SkillsSection() {
                                                     (e.currentTarget as HTMLElement).style.color = "#555";
                                                 }}
                                             >
-                                                <span style={{ fontSize: "16px" }}>{skill.icon}</span>
+                                                {/* eslint-disable-next-line @next/next/no-img-element */}
+                                                <img
+                                                    src={skill.icon}
+                                                    alt={skill.name}
+                                                    width={18}
+                                                    height={18}
+                                                    style={{ display: "block", flexShrink: 0 }}
+                                                />
                                                 <span>{skill.name}</span>
                                             </div>
                                         </Magnet>
