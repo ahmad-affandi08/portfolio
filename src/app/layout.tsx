@@ -37,6 +37,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id" className="light">
+      <head>
+        <title>Ahmad Affandi — Full Stack Developer</title>
+        <meta name="description" content="Full Stack Developer yang membangun solusi digital cepat, modern, dan berkesan. Bekerja di RSUD dr. Soeratno Gemolong Sragen." />
+        <meta name="author" content="Ahmad Affandi" />
+
+      </head>
       <body className={`${inter.variable} ${bricolage.variable} ${jetbrains.variable} antialiased`} suppressHydrationWarning>
         <SmoothScroll>
           <Antigravity

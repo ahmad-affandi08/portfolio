@@ -23,6 +23,7 @@ export interface Experience {
 export interface Skill {
     name: string;
     icon: string;
+    color: string; // brand hex color for glow effect
 }
 
 export const personalInfo = {
@@ -45,49 +46,53 @@ export const stats = [
     { label: "Kontribusi GitHub", value: 200, suffix: "+" },
 ];
 
-export const skills: { category: string; items: Skill[] }[] = [
+export const skills: { category: string; icon: string; items: Skill[] }[] = [
     {
         category: "Frontend",
+        icon: "⚡",
         items: [
-            { name: "React", icon: "https://cdn.simpleicons.org/react/61DAFB" },
-            { name: "Next.js", icon: "https://cdn.simpleicons.org/nextdotjs/000000" },
-            { name: "TypeScript", icon: "https://cdn.simpleicons.org/typescript/3178C6" },
-            { name: "Tailwind CSS", icon: "https://cdn.simpleicons.org/tailwindcss/06B6D4" },
-            { name: "HTML5", icon: "https://cdn.simpleicons.org/html5/E34F26" },
-            { name: "CSS3", icon: "https://cdn.simpleicons.org/css/1572B6" },
+            { name: "React", icon: "https://cdn.simpleicons.org/react/61DAFB", color: "#61DAFB" },
+            { name: "Next.js", icon: "https://cdn.simpleicons.org/nextdotjs/000000", color: "#000000" },
+            { name: "TypeScript", icon: "https://cdn.simpleicons.org/typescript/3178C6", color: "#3178C6" },
+            { name: "Tailwind CSS", icon: "https://cdn.simpleicons.org/tailwindcss/06B6D4", color: "#06B6D4" },
+            { name: "HTML5", icon: "https://cdn.simpleicons.org/html5/E34F26", color: "#E34F26" },
+            { name: "CSS3", icon: "https://cdn.simpleicons.org/css/1572B6", color: "#1572B6" },
         ],
     },
     {
         category: "Backend",
+        icon: "🔧",
         items: [
-            { name: "Node.js", icon: "https://cdn.simpleicons.org/nodedotjs/339933" },
-            { name: "Express", icon: "https://cdn.simpleicons.org/express/000000" },
-            { name: "NestJS", icon: "https://cdn.simpleicons.org/nestjs/E0234E" },
-            { name: "REST API", icon: "https://cdn.simpleicons.org/openapiinitiative/6BA539" },
-            { name: "GraphQL", icon: "https://cdn.simpleicons.org/graphql/E10098" },
-            { name: "Python", icon: "https://cdn.simpleicons.org/python/3776AB" },
+            { name: "Node.js", icon: "https://cdn.simpleicons.org/nodedotjs/339933", color: "#339933" },
+            { name: "Express", icon: "https://cdn.simpleicons.org/express/000000", color: "#404040" },
+            { name: "NestJS", icon: "https://cdn.simpleicons.org/nestjs/E0234E", color: "#E0234E" },
+            { name: "REST API", icon: "https://cdn.simpleicons.org/openapiinitiative/6BA539", color: "#6BA539" },
+            { name: "GraphQL", icon: "https://cdn.simpleicons.org/graphql/E10098", color: "#E10098" },
+            { name: "Python", icon: "https://cdn.simpleicons.org/python/3776AB", color: "#3776AB" },
         ],
     },
     {
         category: "Database",
+        icon: "🗄️",
         items: [
-            { name: "PostgreSQL", icon: "https://cdn.simpleicons.org/postgresql/4169E1" },
-            { name: "MySQL", icon: "https://cdn.simpleicons.org/mysql/4479A1" },
-            { name: "MongoDB", icon: "https://cdn.simpleicons.org/mongodb/47A248" },
-            { name: "Redis", icon: "https://cdn.simpleicons.org/redis/FF4438" },
-            { name: "Prisma", icon: "https://cdn.simpleicons.org/prisma/2D3748" },
-            { name: "Supabase", icon: "https://cdn.simpleicons.org/supabase/3ECF8E" },
+            { name: "PostgreSQL", icon: "https://cdn.simpleicons.org/postgresql/4169E1", color: "#4169E1" },
+            { name: "MySQL", icon: "https://cdn.simpleicons.org/mysql/4479A1", color: "#4479A1" },
+            { name: "MongoDB", icon: "https://cdn.simpleicons.org/mongodb/47A248", color: "#47A248" },
+            { name: "Redis", icon: "https://cdn.simpleicons.org/redis/FF4438", color: "#FF4438" },
+            { name: "Prisma", icon: "https://cdn.simpleicons.org/prisma/2D3748", color: "#5A67D8" },
+            { name: "Supabase", icon: "https://cdn.simpleicons.org/supabase/3ECF8E", color: "#3ECF8E" },
         ],
     },
     {
         category: "DevOps & Tools",
+        icon: "🚀",
         items: [
-            { name: "Docker", icon: "https://cdn.simpleicons.org/docker/2496ED" },
-            { name: "Git", icon: "https://cdn.simpleicons.org/git/F05032" },
-            { name: "CI/CD", icon: "https://cdn.simpleicons.org/githubactions/2088FF" },
-            { name: "Linux", icon: "https://cdn.simpleicons.org/linux/FCC624" },
-            { name: "Vercel", icon: "https://cdn.simpleicons.org/vercel/000000" },
-            { name: "Laravel", icon: "https://cdn.simpleicons.org/laravel/FF2D20" },
+            { name: "Docker", icon: "https://cdn.simpleicons.org/docker/2496ED", color: "#2496ED" },
+            { name: "Git", icon: "https://cdn.simpleicons.org/git/F05032", color: "#F05032" },
+            { name: "CI/CD", icon: "https://cdn.simpleicons.org/githubactions/2088FF", color: "#2088FF" },
+            { name: "Linux", icon: "https://cdn.simpleicons.org/linux/FCC624", color: "#FCC624" },
+            { name: "Vercel", icon: "https://cdn.simpleicons.org/vercel/000000", color: "#555555" },
+            { name: "Laravel", icon: "https://cdn.simpleicons.org/laravel/FF2D20", color: "#FF2D20" },
         ],
     },
 ];
